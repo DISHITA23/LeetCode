@@ -1,14 +1,10 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        Arrays.sort(nums);
-        for(int i=0;i<nums.length;i=i+2)
+        int a=nums[0];
+        for (int i =1;i<nums.length;i++)
         {
-            if(i==nums.length-1||nums[i]!=nums[i+1])
-            {
-                return nums[i];
-            }
+            a=a^nums[i];
         }
-        return -1;
-        
+        return a;
     }
 }
