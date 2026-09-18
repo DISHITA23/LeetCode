@@ -22,11 +22,11 @@ class Solution {
                 if (node.right != null) levelQueue.add(node.right);
             }
 
-            avgList.add(sum / nodes);   // moved outside inner loop
-            levelQueue.poll();           // remove null marker
+            avgList.add(sum / nodes);   
+            levelQueue.poll();           
 
             if (!levelQueue.isEmpty()) {
-                levelQueue.add(null);    // add marker for next level
+                levelQueue.add(null);    
             }
         }
 
